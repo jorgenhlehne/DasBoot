@@ -6,8 +6,15 @@ using UnityEngine;
 
 public class PathScript : MonoBehaviour
 {
-    public Queue<Transform> nodes;
-
-    
+    public Queue<Transform> nodes = new Queue<Transform>();
+    public Transform[] arraynodes;
+    private void Awake()
+    {
+        foreach(Transform t in arraynodes)
+        {
+            nodes.Enqueue(t);
+        }
+        PathManager.AddPath(this);
+    }
 
 }

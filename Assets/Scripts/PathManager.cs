@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PathManager : MonoBehaviour
 {
-    private static List<PathScript> paths;
+    private static List<PathScript> paths = new List<PathScript>();
 
     public static void AddPath(PathScript path)
     {
@@ -14,8 +14,9 @@ public class PathManager : MonoBehaviour
 
     public static PathScript GetRandomPath()
     {
-        var Random = new Random();
-        return paths[Random.Range(0,paths.Count)];
+        int randomint = Random.Range(0, paths.Count);
+        PathScript script = paths[randomint];
+        return script;
     }
  
 }

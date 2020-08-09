@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class LightHouseManager
 {
-    private static List<LightHouseScript> lightHouses;
+    private static List<LightHouseScript> lightHouses = new List<LightHouseScript>();
 
     public static void AddLighHouse(LightHouseScript lightHouse)
     {
